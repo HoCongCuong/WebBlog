@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="login-card">
+    <h2>Register</h2>
+    <hr />
+    <form class="login-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-floating">
+            <input class="form-control" autocomplete="username" aria-required="true" />
+            <label></label>
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-floating">
+            <input class="form-control" autocomplete="new-password" aria-required="true" />
+            <label></label>
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-floating">
+            <input class="form-control" autocomplete="new-password" aria-required="true" />
+            <label></label>
+            <span class="text-danger"></span>
+        </div>
+        <div class="btn-submit">
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </div>
+    </form>
+</div>
