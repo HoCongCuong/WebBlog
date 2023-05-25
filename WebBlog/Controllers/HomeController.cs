@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using WebBlog.Models;
 
@@ -6,6 +7,7 @@ namespace WebBlog.Controllers
 {
     public class HomeController : Controller
     {
+        private enviwebContext db = new enviwebContext();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -15,6 +17,7 @@ namespace WebBlog.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
