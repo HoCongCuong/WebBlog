@@ -774,3 +774,12 @@ ul {
     border-radius: 5px;
     padding: 20px;
 }
+
+div .content{
+    font-size: 3.0rem;
+}
+
+li .subtab{
+    font-size: 1.4rem;
+    opacity: 0.6;
+}

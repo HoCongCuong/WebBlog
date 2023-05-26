@@ -2,66 +2,89 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<link rel="stylesheet" href="~/css/style_adm" asp-append-version="true" />
-
-<div class="page-wrapper">
+<!--  Body Wrapper -->
+<div class="container-fluid">
     <div class="sidebar">
-        <ul class="list-menu">
-            <li>
-                <a href="#">
-                    <ion-icon name="speedometer-outline" class="menu-icon"></ion-icon>
-                    Dashborad
-                    <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <ion-icon name="reader-outline" class="menu-icon"></ion-icon>
-                    Post
-                    <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <ion-icon name="grid-outline" class="menu-icon"></ion-icon>
-                    Topics
-                    <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <ion-icon name="people-outline" class="menu-icon"></ion-icon>
-                    Users
-                    <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <ion-icon name="lock-closed-outline" class="menu-icon"></ion-icon>
-                    Roles
-                    <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <ion-icon name="key-outline" class="menu-icon"></ion-icon>
-                    Permissions
-                    <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <ion-icon name="reader-outline" class="menu-icon"></ion-icon>
-                    Collections
-                    <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="page-content">
-        <h1 class="center">Admin Dashboard</h1>
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/Admin_Dashboard" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                            </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="/Admin-Dashboard/UserData" class="subtab nav-link px-0"> <span class="d-none d-sm-inline">User data </span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin-Dashboard/PostData" class="subtab nav-link px-0"> <span class="d-none d-sm-inline">Posts analysis </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Posts</span>
+                            </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="/Admin-Dashboard/PostList" class="subtab nav-link px-0"> <span class="d-none d-sm-inline">Post list</span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin-Dashboard/CategoriyList" class="subtab nav-link px-0"> <span class="d-none d-sm-inline">Category list</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Users</span>
+                            </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="/Admin-Dashboard/User" class="subtab nav-link px-0"> <span class="d-none d-sm-inline">User List</span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin-Dashboard/Roles" class="subtab nav-link px-0"> <span class="d-none d-sm-inline">Roles</span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin-Dashboard/Permission" class="subtab nav-link px-0"> <span class="d-none d-sm-inline">Permissions</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">USER</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content col py-3">
+                DASHBOARD MENU
+            </div>
+        </div>
     </div>
 </div>
 
