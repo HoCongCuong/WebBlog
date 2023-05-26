@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebBlog.styles.css" asp-append-version="true" />
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -18,28 +17,28 @@
 <body>
     <header>
         @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span>B</span>LOG</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>*@
+            <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span>B</span>LOG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>*@
         @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-        <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </li>
-        </ul>
-        </div>*@
+            <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </li>
+            </ul>
+            </div>*@
         <a href="#" class="logo-wrapper td-none">
             <div><span>B</span>LOG</div>
         </a>
         <nav>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#">All Post</a></li>
+                <li class="nav-item"><a href="/Articles/Index">All Post</a></li>
                 <li class="nav-item"><a href="#">Life Lessons</a></li>
                 <li class="nav-item"><a href="#">Journals</a></li>
                 <li class="nav-item">
@@ -51,70 +50,70 @@
                         <li><a href="#">Best of 2019</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="#">Register</a></li>
-                <li class="nav-item"><a href="#">Login</a></li>
+                <li class="nav-item"><a href="/Identity/Account/Register">Register</a></li>
+                <li class="nav-item"><a href="/Identity/Account/Login">Login</a></li>
                 @*<li class="nav-item">
-                    <a href="#">Awa Melvine</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <a href="#">Awa Melvine</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Logout</a></li>
 
-                    </ul>
-                </li>*@
+                        </ul>
+                    </li>*@
 
             </ul>
         </nav>
         @*</div>
-        </nav>*@
+            </nav>*@
     </header>
-    <div class="container">
+    @*<div class="container">*@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    @*</div>*@
 
 
     @*<footer id = "footer">
-    <div class = "container">
-    <div class = "footer-item">
-    <a href = "#" class = "navbar-brand"><span>...</span>.Blog</a>
-    <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sed ipsam dignissimos aspernatur nam nobis incidunt at ducimus unde voluptatem.</p>
-    <span><i class = "far fa-envelope"></i> myblog@gmail.com</span>
-    </div>
+        <div class = "container">
+        <div class = "footer-item">
+        <a href = "#" class = "navbar-brand"><span>...</span>.Blog</a>
+        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sed ipsam dignissimos aspernatur nam nobis incidunt at ducimus unde voluptatem.</p>
+        <span><i class = "far fa-envelope"></i> myblog@gmail.com</span>
+        </div>
 
-    <div class = "footer-item">
-    <h3>Quick Links</h3>
-    <ul>
-    <li><a href = "#">Home</a></li>
-    <li><a href = "#">Featured</a></li>
-    <li><a href = "#">Latest</a></li>
-    <li><a href = "#">Popular</a></li>
-    <li><a href = "#">Categories</a></li>
-    </ul>
-    </div>
+        <div class = "footer-item">
+        <h3>Quick Links</h3>
+        <ul>
+        <li><a href = "#">Home</a></li>
+        <li><a href = "#">Featured</a></li>
+        <li><a href = "#">Latest</a></li>
+        <li><a href = "#">Popular</a></li>
+        <li><a href = "#">Categories</a></li>
+        </ul>
+        </div>
 
-    <div class = "footer-item">
-    <h3>Categories</h3>
-    <ul>
-    <li><a href = "#">Nature</a></li>
-    <li><a href = "#">Technology</a></li>
-    <li><a href = "#">Life style</a></li>
-    <li><a href = "#">Travel</a></li>
-    <li><a href = "#">Fashion</a></li>
-    </ul>
-    </div>
-    </div>
-    </footer>
+        <div class = "footer-item">
+        <h3>Categories</h3>
+        <ul>
+        <li><a href = "#">Nature</a></li>
+        <li><a href = "#">Technology</a></li>
+        <li><a href = "#">Life style</a></li>
+        <li><a href = "#">Travel</a></li>
+        <li><a href = "#">Fashion</a></li>
+        </ul>
+        </div>
+        </div>
+        </footer>
     *@
-    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
+    <script type="text/javascript">document.addEventListener('DOMContentLoaded', function () {
             $(".post-wrapper").slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -124,7 +123,6 @@
                 prevArrow: $('.prev')
             });
         }
-        )
-    </script>
+        )</script>
 </body>
 </html>
